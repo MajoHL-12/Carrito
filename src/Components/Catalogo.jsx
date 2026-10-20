@@ -1,11 +1,13 @@
 import React from 'react'
 
-//NOTAS DE CATALOGO
-    // Recibimos PROPS desde CatCar.
-    // products   → productos del catálogo.
-    // addToCart  → función para agregar productos.
-export const Catalogo = ({products, addToCart}) => {
+import { useContext } from 'react'
+import { CartContext } from '../Context/CartContext'
 
+
+//NOTAS DE CATALOGO
+    // LE QUITAMOS LOS PROPS PORQUE YA ESTAMOS USANDO CONTEXTO
+export const Catalogo = () => {
+    const {products, addToCart}=useContext(CartContext)
 
   return (
     // NOTAS PRODUCTS.MAP

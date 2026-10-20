@@ -80,7 +80,7 @@ export const CatCar = () => {
         }))
     }
 
-            const quitarCart = (product) => {
+        const quitarCart = (product) => {
                 const productInCart = cart.find(
                     item => item.id === product.id
                 )
