@@ -1,11 +1,15 @@
 import React, { useState } from 'react'
+import { useContext } from 'react'
+import { CartContext } from '../Context/CartContext'
+
 
 // NOTAS USESTATE ADDITEM
 // useState sirve para guardar información que puede cambiar.
 // item = guarda los datos del artículo que estamos creando.
 // AddItem = función que usamos para cambiar los datos de item.
 // Aquí empezamos con los campos vacíos porque el usuario los va a escribir.
-export const AddItem = ({products, setProducts}) => {
+export const AddItem = () => {
+    const {products, setProducts}=useContext(CartContext);
 
     // Guardamos los datos del nuevo artículo
     const [item, AddItem] = useState({

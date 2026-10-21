@@ -4,12 +4,13 @@ import { CartContext } from '../Context/CartContext'
 export const Cart = () => {
     const { cart, quitarCart } = useContext(CartContext)
 
+
     return (
-        <div className='bg-slate-200 py-8 px-8'>
+        <div className='bg-slate-200 py-8 px-8 '>
             <h2 className='flex justify-center text-2xl font-bold text-slate-800 mb-6'>
                 Carrito
             </h2>
-
+            <div className= 'flex items-center'>
             {cart.map((product) => (
                 <div
                     key={product.id}
@@ -25,7 +26,7 @@ export const Cart = () => {
 
                     <p className='font-semibold text-slate-700'>
                         Cantidad: {product.quantity}
-                    </p>
+                    </p> 
 
                     <button
                         className='bg-red-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-red-600 transition-colors duration-200'
@@ -33,8 +34,9 @@ export const Cart = () => {
                     >
                         Eliminar del carrito
                     </button>
-                </div>
+                </div>   
             ))}
+            </div>
         </div>
     )
 }

@@ -20,6 +20,18 @@ export const CartProvider = ({children}) => {
         // [] significa que empieza vacío.
         //Este const es para los productos que se van a mostrar en el carrito
         const [ cart, setCart] = useState([])
+
+        // NOTAS CONTADOR
+        // cart = contiene los productos agregados al carrito.
+        // reduce() = recorre todos los productos y suma sus cantidades.
+        // total = va acumulando la suma.
+        // item.quantity = cantidad de cada producto.
+        // 0 = el contador empieza en cero.
+
+        const cont = cart.reduce((total, item) => {
+            return total + item.quantity
+        }, 0)
+
     
         //NOTAS ADDTOCART
         // Esta función recibe el producto que seleccionamos.
@@ -106,6 +118,7 @@ export const CartProvider = ({children}) => {
             addToCart,
             quitarCart,
             setProducts,
+            cont
         }}
     >
         {children}

@@ -21,7 +21,6 @@ export const CatCar = () => {
     ])
 
 
-
     // NOTAS USESTATE CARRITO
     // cart = productos que están en el carrito.
     // setCart = función para modificar el carrito.
